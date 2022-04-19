@@ -2,14 +2,15 @@ package main
 
 import (
 	"fmt"
+	"github.com/tatsuki1112/writing-an-interpreter-in-go/writing-an-interpreter-in-go/repl"
 	"os"
 	"os/user"
-	"github.com/tatsuki1112/writing-an-interpreter-in-go/writing-an-interpreter-in-go/repl"
 )
 
 func main() {
 	user, err := user.Current()
-	if err != nil {	panic(err)
+	if err != nil {
+		panic(err)
 	}
 
 	fmt.Printf("Hello, %s! This is the MOnkey Programming language!\n", user.Username)
